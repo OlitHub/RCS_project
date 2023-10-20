@@ -107,7 +107,7 @@ def hexagonal_grid_png1(img, hex_size):
         image_grid (PIL image): Image of the hexagonal grid
     """
     
-    path = './data/'
+    path = '../data/'
     name = img.filename.split('/')[-1].split('.')[0]
     WHITE = (255, 255, 255)
     size = img.size
@@ -149,7 +149,7 @@ def hexagonal_grid_svg1(img, hex_size):
     
     size = img.size
     
-    path = './data/'
+    path = '../data/'
     name = img.filename.split('/')[-1].split('.')[0]
     name_tot = path + name + '_' + str(hex_size) + '_hexagonal_grid1.svg'
     dwg = svg.Drawing(name_tot, size=size, profile='tiny')
@@ -188,7 +188,7 @@ def hexagonal_grid_png2(img, hex_size):
         image_grid (PIL image): Image of the hexagonal grid
     """
     
-    path = './data/'
+    path = '../data/'
     name = img.filename.split('/')[-1].split('.')[0]
     WHITE = (255, 255, 255)
     size = img.size
@@ -229,7 +229,7 @@ def hexagonal_grid_svg2(img, hex_size):
     
     size = img.size
     
-    path = './data/'
+    path = '../data/'
     name = img.filename.split('/')[-1].split('.')[0]
     name_tot = path + name + '_' + str(hex_size) + '_hexagonal_grid2.svg'
     dwg = svg.Drawing(name_tot, size=size, profile='tiny')

@@ -1,6 +1,8 @@
 name: Docs_Sphinx
 on:
   push:
+    tags:
+      - '*'
 
 jobs:
   build-docs:

@@ -1,4 +1,6 @@
-### Project - Refresher in Computer science
+# Project - Refresher in Computer science
+
+![Our beautiful wallpaper](https://github.com/olithub/RCS_project/blob/main/data/screenshot.jpg?raw=true)
 
 ## Description
 

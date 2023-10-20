@@ -16,6 +16,7 @@ pylint = "^3.0.1"
 flake8 = "^6.1.0"
 pipreqs = "^0.4.13"
 sphinx = "^7.2.6"
+tk = "^0.1.0"
 
 
 [tool.poetry.group.dev.dependencies]

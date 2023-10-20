@@ -1,3 +1,5 @@
+"""user interface for the hexagonal grid image processing project 
+"""
 import tkinter as tk
 from tkinter import filedialog
 import numpy as np
@@ -5,6 +7,7 @@ from PIL import Image, ImageDraw, ImageTk
 import matplotlib.pyplot as plt
 import rcs_ui_fun as fun
 import svgwrite as svg
+
 
 def open_image():
     file_path = filedialog.askopenfilename()

@@ -1491,6 +1491,17 @@ files = [
 ]
 
 [[package]]
+name = "tk"
+version = "0.1.0"
+description = "TensorKit is a deep learning helper between Python and C++."
+optional = false
+python-versions = "*"
+files = [
+    {file = "tk-0.1.0-py3-none-any.whl", hash = "sha256:703a69ff0d5ba2bd2f7440582ad10160e4a6561595d33457dc6caa79b9bf4930"},
+    {file = "tk-0.1.0.tar.gz", hash = "sha256:60bc8923d5d35f67f5c6bd93d4f0c49d2048114ec077768f959aef36d4ed97f8"},
+]
+
+[[package]]
 name = "tomli"
 version = "2.0.1"
 description = "A lil' TOML parser"
@@ -1603,4 +1614,4 @@ requests = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<3.13"
-content-hash = "2c4e7ce9b016e00c2710927d7d7e98650b4cc178e33598de6d810060af4bf585"
+content-hash = "456f18a9bf9340559450cd7b192b2f3bbbc216d1c7277bdabf8b4c66b8ff75fe"

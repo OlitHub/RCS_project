@@ -3,7 +3,7 @@ from tkinter import filedialog
 import numpy as np
 from PIL import Image, ImageDraw, ImageTk
 import matplotlib.pyplot as plt
-import rcs_fun as fun
+import rcs_ui_fun as fun
 import svgwrite as svg
 
 def open_image():

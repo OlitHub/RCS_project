@@ -8,17 +8,20 @@ import matplotlib.pyplot as plt
 import rcs_ui_fun as fun
 import svgwrite as svg
 
-
 def open_image():
+    global panel # make panel a global variable so we can access it later
     file_path = filedialog.askopenfilename()
     input_image = Image.open(file_path)
     integer_parameter = int(integer_entry.get())
-    processed_image = fun.hexagonal_grid_png2(input_image, integer_parameter) # call our processing function
-    show_processed_image(processed_image)
-    
-max_width = 750
-max_height = 700
-def show_processed_image(image):
+    processed_image =scale_image(fun.hexagonal_grid_png2(input_image, integer_parameter)) # call our processing function
+    panel = tk.Label(window, image=processed_image)
+    panel.image = processed_image # keep a reference
+    panel.pack()
+
+max_width = 700
+max_height = 800
+
+def scale_image(image):
     width, height = image.size
     if width > max_width or height > max_height:
         # If the image is larger, scale it down
@@ -29,10 +32,11 @@ def show_processed_image(image):
         # Resize the image
         image = image.resize((new_width, new_height), Image.LANCZOS)
     image = ImageTk.PhotoImage(image)
+    return image
 
-    panel = tk.Label(window, image=image)
-    panel.image = image  # keep a reference
-    panel.pack()
+def reset_image():
+    integer_entry.delete(0, "end")
+    panel.pack_forget()
 
 window = tk.Tk()
 window.title("Hexagonal Grid Image Processing")
@@ -41,10 +45,12 @@ window.geometry("800x800")
 open_button = tk.Button(window, text="Open Image", command=open_image)
 open_button.pack()
 
+reset_button = tk.Button(window, text="Reset", command=reset_image)
+reset_button.pack()
+
 integer_entry = tk.Entry(window)
 integer_entry.insert(0, "10")  # Set a default value
 integer_entry.pack()
 
 
 window.mainloop()
-

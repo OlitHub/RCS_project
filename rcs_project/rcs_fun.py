@@ -59,15 +59,6 @@ def get_color2(img, center, hex_size):
     pixels = np.zeros((max_x-min_x,max_y-min_y,3))
 
     # Iterate through the hexagon
-<<<<<<< HEAD
-    i=0
-    j=0
-    for row in range(min_x,max_x):
-        for col in range(min_y,max_y):
-            pixels[i][j] = im.getpixel((row,col))
-            j+1
-        i+1
-=======
 
     i = 0
     for row in range(min_x,max_x):
@@ -77,15 +68,11 @@ def get_color2(img, center, hex_size):
             j += 1
         i += 1
 
->>>>>>> a98c395ea4d73cc7d82ca4b15f918d791636bcef
     pixel = np.mean(pixels, axis=(0,1))
     pixel = tuple(pixel.astype(int))
 
     return(pixels)
 
-<<<<<<< HEAD
-print(hex_pix2(im,(50,100),10))
-=======
 
 def hexagon(x, y, hex_size):
 
@@ -268,4 +255,3 @@ def hexagonal_grid_svg2(img, hex_size):
     dwg.save()
     
     return dwg
->>>>>>> a98c395ea4d73cc7d82ca4b15f918d791636bcef

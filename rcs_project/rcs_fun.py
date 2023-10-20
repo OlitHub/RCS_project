@@ -2,7 +2,6 @@
 """
 import numpy as np
 from PIL import Image, ImageDraw
-import matplotlib.pyplot as plt
 import svgwrite as svg
 
 def get_color(img, coord):

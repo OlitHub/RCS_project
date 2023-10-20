@@ -4,28 +4,27 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
-im = Image.open('./data/screenshot.jpg')
+im = Image.open('./data/wallpaper.jpg')
 print(im.format, im.size, im.mode)
 
-def hex_pix(im):
-    height,width = im.size
-    hexagon_size = 50
-    pixels = np.zeros((height, width,3))
-    # Define the size and spacing of the hexagons
-    horizontal_spacing = hexagon_size * 3/4
-    vertical_spacing = hexagon_size * (3 ** 0.5 / 2)
-    # Iterate through the hexagonal grid
-    for row in range((height)//int(vertical_spacing)):
-        for col in range((width)//int(horizontal_spacing)):
-            x = row * vertical_spacing
-            y = col* horizontal_spacing
+def hex_pix2(im,center,hex_size):
+    x=center[0]
+    y=center[1]
+    min_x = int(np.floor(x - hex_size))
+    max_x = int(np.floor(x + hex_size))
+    min_y = int(np.floor(y - hex_size))
+    max_y = int(np.floor(y + hex_size))
+    pixels = np.zeros((max_x-min_x,max_y-min_y,3))
+    # Iterate through the hexagon
+    i=-1
+    j=0
+    for row in range(min_x,max_x):
+        i+1
+        for col in range(min_y,max_y):
+            pixels[i][j] = im.getpixel((row,col))
+            j+1
+    pixel = np.mean(pixels, axis=(0,1))
 
-            # If the row is odd, shift every second column
-            if row % 2 == 1:
-                y += horizontal_spacing
+    return(pixel)
 
-            pixels[row][col] = im.getpixel((x, y))
-
-    return(pixels,pixels.shape)
-
-print(hex_pix(im))
+print(hex_pix2(im,(50,50),2))

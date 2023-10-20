@@ -10,10 +10,10 @@ We are expected to use and apply all the skills we acquired in the context of th
 
 The steps we need to cover are:
 
-- Load the input picture using Image.open(INPUT_FILENAME) from the PIL library,
-- Iterate through the pixels of the input image using an hexagonal grid
-- Sample the color of each hexagone (by iterating over a tens of pixels per hexagone)
-- Create an SVG hexagon with the average color sampled from input file
+- Load the input picture using Image.open(INPUT_FILENAME) from the [PIL](https://he-arc.github.io/livre-python/pillow/index.html) library,
+- Iterate through the pixels of the input image using an [hexagonal grid](https://www.redblobgames.com/grids/hexagons/)
+- [Sample the color](https://www.geeksforgeeks.org/python-pil-getpixel-method/) of each hexagone (by iterating over a tens of pixels per hexagone)
+- Create an [SVG hexagon](https://www.tutorialscampus.com/html5/svg-draw-hexagon.htm) with the average color sampled from input file
 - Write the resulting output picture in as an .svg file using functions like:
     with open('output.svg', 'w') as f:
         f.write(svg_content)

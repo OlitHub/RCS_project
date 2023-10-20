@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw
 import matplotlib.pyplot as plt
 import svgwrite as svg
 
-def get_color(img, coord, hex_size):
+def get_color(img, coord):
     """Returns the color of the pixel at the coordinates (x,y) of the image
 
     Args:
@@ -126,7 +126,7 @@ def hexagonal_grid_png1(img, hex_size):
         y = 0 - hex_size*np.sqrt(3)/2
         for j in range(hex_y):
             if (i+j)%2 == 0:
-                color = get_color(img, (x + hex_size/2, y + hex_size*np.sqrt(3)/2), hex_size)
+                color = get_color(img, (x + hex_size/2, y + hex_size*np.sqrt(3)/2))
                 draw.polygon(hexagon(x, y, hex_size), fill=color, outline=None, width=1)
             y += hex_size*np.sqrt(3)/2
         x += hex_size*3/2
@@ -166,7 +166,7 @@ def hexagonal_grid_svg1(img, hex_size):
         y = 0 - hex_size*np.sqrt(3)/2
         for j in range(hex_y):
             if (i+j)%2 == 0:
-                color = get_color(x + hex_size/2, y + hex_size*np.sqrt(3)/2, img)
+                color = get_color(img, (x + hex_size/2, y + hex_size*np.sqrt(3)/2))
                 dwg.add(dwg.polygon(points=hexagon(x, y, hex_size), fill=svg.rgb(color[0], color[1], color[2])))
             y += hex_size*np.sqrt(3)/2
         x += hex_size*3/2

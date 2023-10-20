@@ -49,7 +49,6 @@ def get_color2(img, center, hex_size):
         pixel (tuple): Tuple of the RGB values of the average color of the hexagon
     """
 
->>>>>>> a98c395ea4d73cc7d82ca4b15f918d791636bcef
     x=center[0]
     y=center[1]
     min_x = max(int(np.floor(x - hex_size)), 0)

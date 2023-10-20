@@ -28,3 +28,7 @@ Once we are able to reproduce the above picture, we can try to:
 In the end we got this image !
 
 ![Our beautiful wallpaper](https://github.com/olithub/RCS_project/blob/main/data/wallpaper_10_hexagonal_grid2.png?raw=true)
+
+## Quality of our code
+
+![Coverage](https://github.com/olithub/RCS_project/blob/main/coverage.svg?raw=true)

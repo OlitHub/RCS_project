@@ -1,6 +1,8 @@
 name: on_push_pytest
 on:
   push:
+    #tags:
+     # - '*'
 
 jobs:
   run_pytest:

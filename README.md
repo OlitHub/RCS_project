@@ -1,6 +1,6 @@
 # Project - Refresher in Computer science
 
-![Our beautiful wallpaper](https://github.com/olithub/RCS_project/blob/main/data/screenshot.jpg?raw=true)
+![The basic wallpaper](https://github.com/olithub/RCS_project/blob/main/data/wallpaper.jpg?raw=true)
 
 ## Description
 
@@ -24,3 +24,7 @@ Once we are able to reproduce the above picture, we can try to:
 - Play around with the size of the hexagons to adjust the output rendering,
 - Replace hexagon grid sampling by triangles,
 - Generate any hexagon / triangle wallpaper from input color pallets and color distribution function.
+
+In the end we got this image !
+
+![Our beautiful wallpaper](https://github.com/olithub/RCS_project/blob/main/data/wallpaper_10_hexagonal_grid2.png?raw=true)

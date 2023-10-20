@@ -1,4 +1,4 @@
-name: on_push_tests_coverage
+name: Tests
 on:
   push:
     #tags:

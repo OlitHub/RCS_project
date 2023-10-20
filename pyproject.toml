@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "rcs-project"
 version = "0.1.0"
-description = ""
+description = "Refresher in computer science project"
 authors = ["Olit <93828847+OlitHub@users.noreply.github.com>"]
 readme = "README.md"
 

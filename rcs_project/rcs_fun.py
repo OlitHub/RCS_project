@@ -69,7 +69,7 @@ def get_color2(img, center, hex_size):
     pixel = np.mean(pixels, axis=(0,1))
     pixel = tuple(pixel.astype(int))
 
-    return(pixels)
+    return(pixel)
 
 
 def hexagon(x, y, hex_size):

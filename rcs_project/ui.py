@@ -35,7 +35,6 @@ def scale_image(image):
     return image
 
 def reset_image():
-    integer_entry.delete(0, "end")
     panel.pack_forget()
 
 window = tk.Tk()
@@ -45,12 +44,13 @@ window.geometry("800x800")
 open_button = tk.Button(window, text="Open Image", command=open_image)
 open_button.pack()
 
-reset_button = tk.Button(window, text="Reset", command=reset_image)
-reset_button.pack()
 
 integer_entry = tk.Entry(window)
 integer_entry.insert(0, "10")  # Set a default value
 integer_entry.pack()
+
+reset_button = tk.Button(window, text="Reset", command=reset_image)
+reset_button.pack()
 
 
 window.mainloop()

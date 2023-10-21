@@ -237,7 +237,7 @@ def hexagonal_grid_svg2(img, hex_size):
     # We start drawing the hexagons from the top left corner of the image
     xmax = size[0]
     ymax = size[1]
-    hex_x = int(xmax/hex_size)
+    hex_x = int(xmax/(hex_size*3/2)) + 1
     hex_y = int(ymax/(hex_size*np.sqrt(3)/2)) + 2
     
     x = 0
@@ -249,7 +249,7 @@ def hexagonal_grid_svg2(img, hex_size):
                 dwg.add(dwg.polygon(points=hexagon(x, y, hex_size), fill=svg.rgb(color[0], color[1], color[2])))
             y += hex_size*np.sqrt(3)/2
         x += hex_size*3/2
-    
+
     dwg.save()
     
     return dwg

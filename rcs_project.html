@@ -36,11 +36,111 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
-<section id="rcs-project-rcs-fun-module">
-<h2>rcs_project.rcs_fun module<a class="headerlink" href="#rcs-project-rcs-fun-module" title="Link to this heading">¶</a></h2>
+<section id="module-rcs_project.rcs_fun">
+<span id="rcs-project-rcs-fun-module"></span><h2>rcs_project.rcs_fun module<a class="headerlink" href="#module-rcs_project.rcs_fun" title="Link to this heading">¶</a></h2>
+<p>Python function file to be imported in the notebook</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="rcs_project.rcs_fun.get_color">
+<span class="sig-prename descclassname"><span class="pre">rcs_project.rcs_fun.</span></span><span class="sig-name descname"><span class="pre">get_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rcs_project.rcs_fun.get_color" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the color of the pixel at the coordinates (x,y) of the image</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>x (float): Coordinate X of the pixel
+y (float): Coordinate Y of the pixel
+img (PIL image): Image to be used as a size reference</p>
+</dd>
+<dt>Returns:</dt><dd><p>color (tuple): Tuple of the RGB values of the pixel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rcs_project.rcs_fun.get_color2">
+<span class="sig-prename descclassname"><span class="pre">rcs_project.rcs_fun.</span></span><span class="sig-name descname"><span class="pre">get_color2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hex_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rcs_project.rcs_fun.get_color2" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the average color of the hexagon whose center is center and size is hex_size</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>img (PIL image): Image
+center (tuple(x, y)): Coordinates of the center of the hexagon
+hex_size (float): Size of the hexagon</p>
+</dd>
+<dt>Returns:</dt><dd><p>pixel (tuple): Tuple of the RGB values of the average color of the hexagon</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rcs_project.rcs_fun.hexagon">
+<span class="sig-prename descclassname"><span class="pre">rcs_project.rcs_fun.</span></span><span class="sig-name descname"><span class="pre">hexagon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hex_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rcs_project.rcs_fun.hexagon" title="Link to this definition">¶</a></dt>
+<dd><p>Generates the coordinates of each corners of a hexagon 
+with the coordinates of the top-left corner</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>x (float): Coordinate X of the top-left corner
+y (float): Coordinate Y of the top-left corner</p>
+</dd>
+<dt>Returns:</dt><dd><p>corners (list): List of the coordinates of each corners of the hexagon</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rcs_project.rcs_fun.hexagonal_grid_png1">
+<span class="sig-prename descclassname"><span class="pre">rcs_project.rcs_fun.</span></span><span class="sig-name descname"><span class="pre">hexagonal_grid_png1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hex_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rcs_project.rcs_fun.hexagonal_grid_png1" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a hexagon grid of the size of the image, with hexagons of the size of hex_size.
+The color of each hexagon is the color of the center pixel of the hexagon.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>img (PIL image): Image to be used as a size reference
+hex_size (float): Size of the hexagon</p>
+</dd>
+<dt>Returns:</dt><dd><p>image_grid (PIL image): Image of the hexagonal grid</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rcs_project.rcs_fun.hexagonal_grid_png2">
+<span class="sig-prename descclassname"><span class="pre">rcs_project.rcs_fun.</span></span><span class="sig-name descname"><span class="pre">hexagonal_grid_png2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hex_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rcs_project.rcs_fun.hexagonal_grid_png2" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a hexagon grid of the size of the image, with hexagons of the size of hex_size.
+The color of each hexagon is the average color of the pixels of the hexagon.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>img (PIL image): Image to be used as a size reference
+hex_size (float): Size of the hexagon</p>
+</dd>
+<dt>Returns:</dt><dd><p>image_grid (PIL image): Image of the hexagonal grid</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rcs_project.rcs_fun.hexagonal_grid_svg1">
+<span class="sig-prename descclassname"><span class="pre">rcs_project.rcs_fun.</span></span><span class="sig-name descname"><span class="pre">hexagonal_grid_svg1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hex_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rcs_project.rcs_fun.hexagonal_grid_svg1" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a hexagon grid of the size of the image, with hexagons of the size of hex_size.
+The color of each hexagon is the color of the center pixel inside the hexagon.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>img (PIL image): Image to be used as a size reference
+hex_size (float): Size of the hexagon</p>
+</dd>
+<dt>Returns:</dt><dd><p>dwg (svg drawing): Image of the hexagonal grid as a svg</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rcs_project.rcs_fun.hexagonal_grid_svg2">
+<span class="sig-prename descclassname"><span class="pre">rcs_project.rcs_fun.</span></span><span class="sig-name descname"><span class="pre">hexagonal_grid_svg2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hex_size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rcs_project.rcs_fun.hexagonal_grid_svg2" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a hexagon grid of the size of the image, with hexagons of the size of hex_size.
+The color of each hexagon is the average color of the pixels inside the hexagon.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>img (PIL image): Image to be used as a size reference
+hex_size (float): Size of the hexagon</p>
+</dd>
+<dt>Returns:</dt><dd><p>dwg (svg drawing): Image of the hexagonal grid as a svg</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<section id="module-rcs_project">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-rcs_project" title="Link to this heading">¶</a></h2>
+<p>init file for rcs_project.</p>
 </section>
 </section>
 

@@ -56,7 +56,7 @@ jobs:
       - name: PyLint with dynamic badge
         # You may pin to the exact commit or the version.
         # uses: Silleellie/pylint-github-action@544decdece6dfa79a2ae5dde29dd1739900f73eb
-        uses: Silleellie/pylint-github-action@v4
+        uses: Silleellie/pylint-github-action@v1
         with:
           # The path, relative to the root of the repo, of the package(s) to lint
           package-path: ./rcs_project

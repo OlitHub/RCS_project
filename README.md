@@ -32,4 +32,4 @@ In the end we got this image !
 ## Quality of our code
 
 ![Coverage](https://github.com/olithub/RCS_project/blob/main/coverage.svg?raw=true)
-![pylint](https://img.shields.io/badge/pylint-6.56-orange?logo=python&logoColor=white)
+![pylint](https://img.shields.io/badge/pylint-9.12-yellow?logo=python&logoColor=white)

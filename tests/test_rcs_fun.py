@@ -44,7 +44,7 @@ def test_hex_grids():
     """Tests the hexagonal_grid_png and svg functions
     """
 
-    img = Image.open("data/test_image.png")
+    img = Image.open("../data/test_image.png")
 
     fun.hexagonal_grid_png1(img, 10)
     fun.hexagonal_grid_png2(img, 10)

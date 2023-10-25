@@ -1,9 +1,7 @@
 name: Tests
 on:
   push:
-    tags:
-      - '*'
-
+  
 jobs:
   run_pytest:
     permissions: write-all
